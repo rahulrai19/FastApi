@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
+
 
 app = FastAPI()
 
@@ -46,6 +48,26 @@ def get_users(name:str=None,price:int=0):
             "price":price
             }
 
+## Pydantic Validation
+
+class User(BaseModel):
+    name:str
+    age:int
+
+## Request body and post request
+
+@app.post("/create-user")
+def create_user(user:User): # we can use User:dict
+    return{
+       "message":"User Created",
+       "data":user
+    }
+
+# @app.post()
+# def create_user():
+#     return{
+
+#     }
 
 
 
