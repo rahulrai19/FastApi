@@ -94,6 +94,28 @@ def create_user(user:dict):
 * Output Formating 
 * Interview Questions 
 
+## Status Codes & Responses
+* HTTP Code Status
+* Custom Responses 
+* Error Handling Baics
+* Interview Questions 
+
+`28-07-2026`
+
+## Exception Handling 
+* HTTPException 
+* Custom Exceptions
+* Global Error Handler
+* Interview Questions
+
+## Dependancy Injection 
+* What is depends()
+* Reusable Logic 
+* Auth example intro 
+* Interview Questions
+
+## 
+
 
 
 
