@@ -1,4 +1,6 @@
 import sqlite3
+from fastapi import FastAPI
+app = FastAPI()
 
 conn = sqlite3.connect("test.db",check_same_thread = False)
 
@@ -14,3 +16,11 @@ cursor.execute(
 
     """
 )
+
+conn.commit()
+
+@app.get("/")
+def home():
+    return{
+        "message":"Database Connected success"
+    }

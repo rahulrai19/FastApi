@@ -595,3 +595,15 @@ Client Response
 * SQLite vs SQLAlchemy
 * Interview Questions
 
+`29-07-2026`
+
+## Database Integration (SQLAlchemy)
+ 
+* What is SQLAlchemy ?
+* Install SQLAlchemy
+* Setup DB
+* Model (Table) Create
+* Table Create in DB
+* Connect FastAPI with DB
+* Interview Questions
+
