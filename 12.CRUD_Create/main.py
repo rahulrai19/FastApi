@@ -7,13 +7,11 @@ app = FastAPI()
 
 DATABASE_URL = "sqlite:///./test.db"
 
-# engine created for db connection 
 engine = create_engine (
     DATABASE_URL,
     connect_args={"check_same_thread":False}
 )
 
-# session creation for db operation 
 sessionLocal = sessionmaker(bind = engine)
 
 Base = declarative_base()
@@ -37,9 +35,13 @@ def get_db():
     finally:
         db.close()
 
-# route 
-@app.get("/")
-def home(db:Session=Depends(get_db)):
+@app.post("/todos")
+def create_todo(title:str,db:Session = Depends(get_db)):
+    todo = Todo(title = title,completed='False') 
+    db.add(todo)
+    db.commit()
+    db.refresh(todo)
     return{
-        "message":"DB Connection is success"
+        "message":"Todo Created",
+        "data":todo
     }

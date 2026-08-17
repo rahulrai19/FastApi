@@ -607,3 +607,23 @@ Client Response
 * Connect FastAPI with DB
 * Interview Questions
 
+## CRUD with Database 
+* What is CREATE?
+* FLOW CREATE API
+* TESTING with SQagger UI & DB
+* Interview QUestions 
+
+## CRUD with DB
+* Read 
+* Read with ID
+
+## CRUD with DB
+* what is update
+* Flow of Update Api
+* Testig with Swagger UI & DB
+* Interview Questions 
+
+
+
+
+
