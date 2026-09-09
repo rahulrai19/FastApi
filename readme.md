@@ -623,7 +623,42 @@ Client Response
 * Testig with Swagger UI & DB
 * Interview Questions 
 
+## CRUD with DB
+* What is DELETE?
+* Flow of DELETE API
+* Testing with Swagger UI & DB
+* Interview Questions
 
+`26-08-2026`
+## Async Programming
+* async/await
+* Why async matters
+* Performance benefits
+* Interview Questions
 
+## Authentication Basics
 
+. JWT intro
+. Token-based auth
+. Login API
+. Interview Questions
+ 
+ ![alt text](image-6.png)
+- pip install python-jose
 
+`31-08-2026`
+
+## OAuth2 + JWT
+
+* Secure routes
+* Token validation
+* Password hashing
+* Interview Questions
+
+pip install "python-jose" "passlib[bcrypt]" "python-multipart"
+
+## File Upload & Static Files
+
+* Upload files
+* Serve images/files
+* Interview Questions
