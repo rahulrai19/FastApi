@@ -679,3 +679,37 @@ pip install "python-jose" "passlib[bcrypt]" "python-multipart"
 * Interview Questions
 
 - pip install python-dotenv
+
+## Testing APIs
+
+. Why Testing?
+. Install Pytest
+. Pytest + FastAPI
+. Test endpoints
+. Interview Questions
+
+pip install pytest
+
+pip install httpx2
+
+pytest `for running test`
+
+## Third party API integration
+
+. What is External API?
+. Install requests
+. Basic API call
+· Single data fetch
+· FastAPI integration
+. Interview Questions
+
+## Web Crawling using FastAPI
+
+. What is External API?
+. Install requests
+. Basic API call
+· Single data fetch
+. FastAPI integration
+. Interview Questions
+
+pip install beutifullsoup4
