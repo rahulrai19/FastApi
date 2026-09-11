@@ -662,3 +662,20 @@ pip install "python-jose" "passlib[bcrypt]" "python-multipart"
 * Upload files
 * Serve images/files
 * Interview Questions
+
+## CORS Handling
+
+* What is CORS?
+* Enable in FastAPI
+* Frontend(ReactJS) connection
+* Interview Questions
+
+## Environment Variables
+
+* What is Environment Variables
+* Install python-dotenv
+* .env setup
+* Config management
+* Interview Questions
+
+- pip install python-dotenv
