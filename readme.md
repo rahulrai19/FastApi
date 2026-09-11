@@ -712,4 +712,18 @@ pytest `for running test`
 . FastAPI integration
 . Interview Questions
 
-pip install beutifullsoup4
+pip install beautifulsoup4
+
+## Pagination in FastAPI
+
+. What is Pagination?
+. Pagination logic
+. FastAPI integration
+. Interview Questions
+
+## Caching in FastAPI
+
+. What is Caching?
+· TTL(Time-To-Live) configration
+· FastAPI integration
+. Interview Questions

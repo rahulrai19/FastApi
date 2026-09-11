@@ -6,7 +6,7 @@ app = FastAPI()
 
 
 @app.get("/news")
-def get_news():
+def get_news(page: int = 1, limit: int = 5):
     url = "https://indianexpress.com/"
 
     response = requests.get(url)
@@ -20,6 +20,18 @@ def get_news():
         if heading:
             headings.append(heading)
 
+    start = (page - 1) * limit
+    end = start + limit
+
     return {
-        "headings": headings
+        "page": page,
+        "limit": limit,
+        "headings": headings[start:end]
+    }
+
+
+@app.get("/home")
+def home():
+    return {
+        "message": "News web crawler is running"
     }
