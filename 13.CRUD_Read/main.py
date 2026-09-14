@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker,declarative_base,Session
 from sqlalchemy import Column,Integer,String
-from fastapi import FastAPI,Depends,HTTPException
+from fastapi import FastAPI,Depends,HTTPException,status
 
 app = FastAPI()
 
@@ -56,13 +56,14 @@ def get_todos(db:Session = Depends(get_db)):
         "Total":len(todos),
         "data":todos
     }
+
 # Read through ID
 @app.get("/todos/{todos_id}")
 def  get_todo(todo_id=int,db:Session=Depends(get_db)):
     todo = db.query(Todo).filter(Todo.id == todo_id).first()
 
     if not todo:
-        raise HTTPException(status_code=404,detail="Todo not found")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
     return todo
 
 

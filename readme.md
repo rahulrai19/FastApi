@@ -727,3 +727,32 @@ pip install beautifulsoup4
 · TTL(Time-To-Live) configration
 · FastAPI integration
 . Interview Questions
+
+## Rate Limiting in FastAPI
+
+. What is Rate Limiting?
+. Using slowapi Library
+. FastAPI integration
+. Testing
+. Interview Questions'
+
+pip install slowapi
+
+## Project Deployment
+
+. Create a Simple Project.
+. Code Push on Github.
+. Deploy on Render.
+· Live API.
+. Code testing on Production.
+
+pip freeze > requirements.txt
+
+##  Blog API Project
+
+· PostgreSQL Setup + FastAPI
+Start
+. CRUD APIS
+. JWT Auth
+. Pagination + Search
+. Code Push to GitHub.

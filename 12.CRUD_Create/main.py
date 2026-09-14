@@ -35,6 +35,8 @@ def get_db():
     finally:
         db.close()
 
+# Create Request
+
 @app.post("/todos")
 def create_todo(title:str,db:Session = Depends(get_db)):
     todo = Todo(title = title,completed='False') 

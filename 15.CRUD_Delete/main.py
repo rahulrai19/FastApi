@@ -99,3 +99,44 @@ def delete_todo(todo_id:int,db:Session = Depends(get_db)):
     return{
         "message":"TODO Deleted"
     }
+
+# Soft Delete
+
+@app.delete("/todos/{todo_id}")
+def delete_todo(todo_id: int, db: Session = Depends(get_db)):
+    todo = db.query(Todo).filter(Todo.id == todo_id).first()
+
+    if not todo:
+        raise HTTPException(status_code=404, detail="Todo not found")
+
+    todo.is_deleted = True
+    db.commit()
+
+    return {"message": "TODO deleted"}
+
+# put delete 
+@app.put("/todos/{todo_id}/delete")
+def soft_delete_todo(todo_id: int, db: Session = Depends(get_db)):
+    todo = db.query(Todo).filter(Todo.id == todo_id).first()
+
+    if not todo:
+        raise HTTPException(status_code=404, detail="Todo not found")
+
+    todo.is_deleted = True
+    db.commit()
+
+    return {"message": "TODO marked as deleted"}
+
+# post delete
+
+@app.post("/todos/{todo_id}/delete")
+def soft_delete_todo(todo_id: int, db: Session = Depends(get_db)):
+    todo = db.query(Todo).filter(Todo.id == todo_id).first()
+    if not todo:
+            raise HTTPException(status_code=404, detail="Todo not found")
+    
+    todo.is_deleted = True
+    db.commit()
+    
+    return {"message": "TODO marked as deleted"}
+    
